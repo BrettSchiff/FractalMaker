@@ -27,6 +27,11 @@ public:
 	size_t Width() const { return m_width; }
 	size_t Height() const { return m_height; }
 	Coord StartPos() const { return m_startPos; }
+	bool operator==(Shape const& rhs);
+	void RotateRight90();
+	void RotateLeft90();
+
+	friend Shape operator+(Shape const& lhs, Shape const& rhs);
 
 private:
 	// ******* Data *******
